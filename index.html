@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete Guide to Male Sexual Wellness | Men's Health Resource</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'deep-blue': '#0f172a',
+                        'clinical': '#f8fafc',
+                        'accent': '#3b82f6',
+                        'warm': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .technique-card {
+            transition: all 0.3s ease;
+        }
+        .technique-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .anatomy-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 3s ease-out forwards;
+        }
+        @keyframes draw {
+            to { stroke-dashoffset: 0; }
+        }
+        .tab-active {
+            border-bottom: 3px solid #3b82f6;
+            color: #3b82f6;
+        }
+        .hidden-section {
+            display: none;
+        }
+        .visible-section {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-serif text-2xl font-semibold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
+                        Vitality Guide
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#anatomy" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Anatomy</a>
+                        <a href="#techniques" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Techniques</a>
+                        <a href="#prostate" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Prostate Health</a>
+                        <a href="#enhancement" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Enhancement</a>
+                        <a href="#wellness" class="hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Wellness</a>
+                    </div>
+                </div>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#anatomy" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Anatomy</a>
+                <a href="#techniques" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Techniques</a>
+                <a href="#prostate" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Prostate Health</a>
+                <a href="#enhancement" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50">Enhancement</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+                The Complete Guide to<br>
+                <span class="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">Male Sexual Wellness</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-300 font-light">
+                A medically-informed, comprehensive resource for understanding male anatomy, exploring pleasure techniques, and optimizing sexual health through evidence-based practices.
+            </p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#techniques" class="px-8 py-3 border border-transparent text-base font-medium rounded-full text-blue-900 bg-white hover:bg-blue-50 transition-all transform hover:scale-105 md:py-4 md:text-lg md:px-10">
+                    Explore Techniques
+                </a>
+                <a href="#wellness" class="px-8 py-3 border border-white text-base font-medium rounded-full text-white hover:bg-white/10 transition-all md:py-4 md:text-lg md:px-10">
+                    Health First
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-slate-50 to-transparent"></div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose prose-lg mx-auto text-center">
+                <h2 class="text-3xl font-serif font-semibold text-slate-900 mb-6">Understanding Your Body</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Sexual health is an integral component of overall wellness. This guide provides evidence-based information on male sexual anatomy, physiological responses, and techniques for enhancing pleasure while maintaining optimal urogenital health. All content is presented with clinical accuracy and respect for diverse sexual expressions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anatomy Section -->
+    <section id="anatomy" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900">Male Sexual Anatomy</h2>
+                <p class="mt-4 text-lg text-slate-600">Understanding the physiological structures involved in sexual response</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer group" onclick="highlightPart('penile')">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">Penile Anatomy</h3>
+                                <p class="text-slate-600 text-sm">The penis consists of three cylindrical structures: two corpora cavernosa dorsally and one corpus spongiosum ventrally surrounding the urethra. The glans (head) contains the highest concentration of nerve endings, particularly the frenulum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer group" onclick="highlightPart('prostate')">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center text-violet-600 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">The Prostate Gland</h3>
+                                <p class="text-slate-600 text-sm">Located approximately 2-3 inches anterior to the anal wall, the prostate is often called the "male G-spot." Stimulation can produce intense orgasmic responses distinct from penile stimulation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer group" onclick="highlightPart('nervous')">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">Nervous System</h3>
+                                <p class="text-slate-600 text-sm">The pudendal nerve (S2-S4) carries sensory information from the genitals. The vagus nerve bypasses the spinal cord, explaining why some paraplegic men can still experience orgasm.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative bg-white rounded-3xl shadow-xl p-8 border border-slate-200">
+                    <div class="aspect-square relative">
+                        <!-- SVG Anatomy Diagram -->
+                        <svg viewBox="0 0 400 400" class="w-full h-full" id="anatomy-svg">
+                            <!-- Simplified anatomical representation -->
+                            <defs>
+                                <linearGradient id="tissueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Base -->
+                            <ellipse cx="200" cy="350" rx="80" ry="30" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                            
+                            <!-- Shaft -->
+                            <rect x="160" y="150" width="80" height="200" rx="20" fill="url(#tissueGradient)" stroke="#d1d5db" stroke-width="2" id="penile-shaft"/>
+                            
+                            <!-- Glans -->
+                            <path d="M 160 150 Q 160 100 200 80 Q 240 100 240 150 Z" fill="#fed7aa" stroke="#fb923c" stroke-width="2" id="glans"/>
+                            
+                            <!-- Frenulum indicator -->
+                            <circle cx="200" cy="150" r="4" fill="#ef4444" opacity="0.6" id="frenulum-dot"/>
+                            
+                            <!-- Prostate (internal) -->
+                            <circle cx="200" cy="280" r="35" fill="#ddd6fe" stroke="#8b5cf6" stroke-width="2" opacity="0.7" id="prostate-gland"/>
+                            <text x="200" y="285" text-anchor="middle" font-size="10" fill="#6d28d9" font-weight="600">Prostate</text>
+                            
+                            <!-- Labels -->
+                            <text x="260" y="120" font-size="12" fill="#475569" font-weight="500">Glans (High sensitivity)</text>
+                            <line x1="250" y1="125" x2="230" y2="140" stroke="#94a3b8" stroke-width="1"/>
+                            
+                            <text x="260" y="250" font-size="12" fill="#475569" font-weight="500">Corpus Cavernosum</text>
+                            <line x1="250" y1="255" x2="210" y2="250" stroke="#94a3b8" stroke-width="1"/>
+                            
+                            <text x="80" y="280" text-anchor="end" font-size="12" fill="#6d28d9" font-weight="500">Prostate Gland</text>
+                            <line x1="90" y1="285" x2="165" y2="285" stroke="#8b5cf6" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="mt-4 text-center text-sm text-slate-500 italic">
+                        Interactive diagram: Click sections above to highlight anatomical structures
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Techniques Section -->
+    <section id="techniques" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900">Advanced Techniques</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Evidence-based methods for enhancing pleasure, delaying ejaculation, and achieving more intense orgasmic responses</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12 border-b border-slate-200">
+                <button onclick="switchTab('solo')" id="tab-solo" class="px-6 py-3 text-sm font-medium text-blue-600 border-b-3 border-blue-600 transition-all">Solo Techniques</button>
+                <button onclick="switchTab('edging')" id="tab-edging" class="px-6 py-3 text-sm font-medium text-slate-500 hover:text-slate-700 transition-all">Edging & Control</button>
+                <button onclick="switchTab('prostate')" id="tab-prostate-btn" class="px-6 py-3 text-sm font-medium text-slate-500 hover:text-slate-700 transition-all">Prostate Play</button>
+                <button onclick="switchTab('sensory')" id="tab-sensory" class="px-6 py-3 text-sm font-medium text-slate-500 hover:text-slate-700 transition-all">Sensory Enhancement</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="content-solo" class="visible-section">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="technique-card bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                            <span class="text-2xl font-bold">01</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Start-Stop Method</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            Stimulate until approaching the "point of no return" (PONR), then completely cease stimulation for 30-60 seconds. Resume with reduced intensity. Repeat 3-5 times before allowing ejaculation.
+                        </p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mb-1">Benefit</p>
+                            <p class="text-sm text-slate-700">Builds ejaculatory control and increases final orgasm intensity through accumulation of sexual tension.</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                        <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center text-violet-600 mb-4">
+                            <span class="text-2xl font-bold">02</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Frenulum Focus</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            The frenulum (V-shaped band on underside of glans) contains the highest density of nerve endings. Use light, lubricated circular motions with fingertips rather than full grip stimulation.
+                        </p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mb-1">Technique</p>
+                            <p class="text-sm text-slate-700">Use silicone-based lubricant. Vary between steady pressure and feather-light touch. Combine with scrotal stimulation.</p>
+                        </div>
+                    </div>
+
+                    <div class="technique-card bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 mb-4">
+                            <span class="text-2xl font-bold">03</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Ballooning</h3>
+                        <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+                            Focus stimulation only on the glans and upper shaft while maintaining a relaxed pelvic floor. Avoid full erection contraction. This maintains blood flow without rapid progression to orgasm.
+                        </p>
+                        <div class="bg-white p-3 rounded-lg border border-slate-200">
+                            <p class="text-xs text-slate-500 font-medium uppercase tracking-wide mb-1">Physiology</p>
+                            <p class="text-sm text-slate-700">Maximizes corpus spongiosum engorgement, creating different sensation quality and improved erectile strength.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-edging" class="hidden-section">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-100 mb-8">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-4">The Edging Protocol</h3>
+                        <p class="text-slate-700 mb-6">Edging involves bringing yourself to the brink of orgasm repeatedly before finally releasing. This practice can lead to stronger pelvic floor muscles and more intense climactic release.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-semibold text-sm">1</div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900">Recognition Phase</h4>
+                                    <p class="text-sm text-slate-600">Learn to identify the "ejaculatory inevitability" sensation—the moment when orgasm becomes unavoidable. This typically occurs 2-3 seconds before ejaculation.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-semibold text-sm">2</div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900">The Plateau</h4>
+                                    <p class="text-sm text-slate-600">When approaching PONR, completely stop stimulation. Contract pelvic floor muscles (Kegel) firmly for 10 seconds while taking deep diaphragmatic breaths.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-semibold text-sm">3</div>
+                                <div>
+                                    <h4 class="font-semibold text-slate-900">Cool Down</h4>
+                                    <p class="text-sm text-slate-600">Allow arousal to subside to 60-70% before resuming. This "wave riding" creates multiple peaks of pleasure without ejaculation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-prostate" class="hidden-section">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                        <div class="bg-violet-600 px-6 py-4">
+                            <h3 class="text-lg font-semibold text-white">External Prostate Massage</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-slate-600 mb-4 text-sm">The prostate can be stimulated externally through the perineum (taint), located between the scrotum and anus.</p>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start"><span class="text-violet-600 mr-2">•</span> Apply firm pressure with two fingers to the perineum midway point</li>
+                                <li class="flex items-start"><span class="text-violet-600 mr-2">•</span> Use "come hither" motion toward the navel</li>
+                                <li class="flex items-start"><span class="text-violet-600 mr-2">•</span> Combine with simultaneous penile stimulation</li>
+                                <li class="flex items-start"><span class="text-violet-600 mr-2">•</span> Use plenty of lubrication to prevent tissue irritation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
+                        <div class="bg-indigo-600 px-6 py-4">
+                            <h3 class="text-lg font-semibold text-white">Internal Prostate Stimulation</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-slate-600 mb-4 text-sm">Direct stimulation via the anterior rectal wall produces the most intense prostatic response.</p>
+                            <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-4">
+                                <p class="text-xs text-amber-800 font-medium">SAFETY FIRST</p>
+                                <p class="text-xs text-amber-700 mt-1">Always use toys with flared bases and body-safe materials. Never insert objects without retrieval strings.</p>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                <li class="flex items-start"><span class="text-indigo-600 mr-2">•</span> Empty bowels and bladder first</li>
+                                <li class="flex items-start"><span class="text-indigo-600 mr-2">•</span> Locate prostate 2-3 inches in, toward belly button</li>
+                                <li class="flex items-start"><span class="text-indigo-600 mr-2">•</span> Texture resembles walnut (when unaroused)</li>
+                                <li class="flex items-start"><span class="text-indigo-600 mr-2">•</span> Gentle "beckoning" motion most effective</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                    <h4 class="font-semibold text-slate-900 mb-2">The Male G-Spot Orgasm</h4>
+                    <p class="text-sm text-slate-600">Prostate-induced orgasms often feel different from penile orgasms—deeper, more full-body, and capable of multiple successive waves without refractory period. Many men report these as significantly more intense than traditional ejaculatory orgasms.</p>
+                </div>
+            </div>
+
+            <div id="content-sensory" class="hidden-section">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="font-semibold text-slate-900 mb-2">Temperature Play</h4>
+                        <p class="text-sm text-slate-600 mb-3">Alternating warm and cool sensations can heighten nerve sensitivity.</p>
+                        <div class="text-xs text-slate-500 bg-slate-50 p-2 rounded">Try warming lubricant in hands vs. cool water rinse cycles</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="font-semibold text-slate-900 mb-2">Sounding (Advanced)</h4>
+                        <p class="text-sm text-slate-600 mb-3">Urethral stimulation using specialized medical-grade sounds.</p>
+                        <div class="text-xs text-red-600 bg-red-50 p-2 rounded font-medium">Requires sterilization training. High UTI risk if improper.</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="font-semibold text-slate-900 mb-2">E-Stim</h4>
+                        <p class="text-sm text-slate-600 mb-3">Electrical stimulation of pudendal nerve pathways.</p>
+                        <div class="text-xs text-slate-500 bg-slate-50 p-2 rounded">Use only devices designed for erogenous zones</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhancement Section -->
+    <section id="enhancement" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Optimizing Sexual Response</h2>
+                    <p class="text-slate-300 text-lg mb-8">Lifestyle factors significantly impact sexual function and pleasure capacity. Evidence shows these interventions improve orgasmic intensity and erectile quality.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Pelvic Floor Training</h3>
+                                <p class="text-slate-400 text-sm">Kegel exercises strengthen pubococcygeus muscles, leading to more powerful ejaculatory contractions and improved erectile rigidity. Practice 3 sets of 10-second contractions daily.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Nutritional Support</h3>
+                                <p class="text-slate-400 text-sm">L-arginine, zinc, and magnesium support nitric oxide production and seminal fluid volume. Hydration status directly affects ejaculate volume and viscosity.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Abstinence Periods</h3>
+                                <p class="text-slate-400 text-sm">3-5 days of abstinence maximizes seminal vesicle fluid accumulation and sperm density, often resulting in more intense ejaculatory sensations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10">
+                    <h3 class="text-2xl font-semibold mb-6">The Refractory Period</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">Age 18-25</span>
+                                <span class="text-blue-400 font-semibold">5-15 minutes</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-blue-400 h-2 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">Age 26-35</span>
+                                <span class="text-blue-400 font-semibold">15-30 minutes</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-blue-400 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">Age 36-50</span>
+                                <span class="text-blue-400 font-semibold">30 minutes - 2 hours</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-blue-400 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium">Age 50+</span>
+                                <span class="text-blue-400 font-semibold">Hours to days</span>
+                            </div>
+                            <div class="w-full bg-white/20 rounded-full h-2">
+                                <div class="bg-blue-400 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-6 text-sm text-slate-400 italic">Note: Prostate orgasms often bypass the refractory period entirely, allowing for multiple successive climaxes regardless of age.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health & Safety -->
+    <section id="wellness" class="py-20 bg-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-slate-900">Health & Safety Considerations</h2>
+                <p class="mt-4 text-slate-600">Prioritizing urogenital health while exploring sexuality</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-green-500">
+                    <h3 class="font-semibold text-lg text-slate-900 mb-2">Hygiene Protocols</h3>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>• Always wash hands before and after genital contact</li>
+                        <li>• Urinate after internal stimulation to prevent UTIs</li>
+                        <li>• Clean toys with antibacterial soap or specialized cleanser</li>
+                        <li>• Trim fingernails short to avoid mucosal tears</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-amber-500">
+                    <h3 class="font-semibold text-lg text-slate-900 mb-2">Warning Signs</h3>
+                    <ul class="space-y-2 text-sm text-slate-600">
+                        <li>• Pain during ejaculation (possible prostatitis)</li>
+                        <li>• Blood in semen (hematospermia)</li>
+                        <li>• Persistent testicular pain (rule out torsion)</li>
+                        <li>• Burning urination (infection indicator)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-blue-500">
+                    <h3 class="font-semibold text-lg text-slate-900 mb-2">Lubrication Safety</h3>
+                    <p class="text-sm text-slate-600 mb-2">Water-based: Safe for all toys, dries quickly.<br>
+                    Silicone-based: Long-lasting, shower-safe, degrades silicone toys.<br>
+                    Oil-based: Never use with latex condoms (causes breakage).</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-red-500">
+                    <h3 class="font-semibold text-lg text-slate-900 mb-2">When to Seek Care</h3>
+                    <p class="text-sm text-slate-600">Persistent erectile dysfunction, priapism (erection >4 hours), severe penile curvature (Peyronie's disease), or loss of sensation require medical evaluation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-serif font-bold text-center text-slate-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4" id="faq-container">
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors">
+                        <span class="font-medium text-slate-900">Is frequent masturbation harmful?</span>
+                        <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-slate-600 text-sm leading-relaxed border-t border-slate-200">
+                        No. Research indicates that frequent ejaculation (21+ times monthly) may actually reduce prostate cancer risk. However, excessive friction can cause temporary skin irritation (friction dermatitis). Use lubrication to prevent tissue damage.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors">
+                        <span class="font-medium text-slate-900">Can I run out of sperm?</span>
+                        <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-slate-600 text-sm leading-relaxed border-t border-slate-200">
+                        No. The body continuously produces sperm (spermatogenesis cycle ~74 days). While ejaculate volume decreases with successive orgasms, the body replenishes seminal fluid within hours to days depending on age and health.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors">
+                        <span class="font-medium text-slate-900">Why does urination feel different after ejaculation?</span>
+                        <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-slate-600 text-sm leading-relaxed border-t border-slate-200">
+                        The internal urethral sphincter contracts during ejaculation to prevent retrograde ejaculation into the bladder. It takes a few minutes to fully relax, causing temporary resistance to urine flow. This is normal physiology.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left bg-slate-50 hover:bg-slate-100 flex justify-between items-center transition-colors">
+                        <span class="font-medium text-slate-900">Is prostate play only for gay men?</span>
+                        <svg class="w-5 h-5 text-slate-500 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="hidden px-6 py-4 bg-white text-slate-600 text-sm leading-relaxed border-t border-slate-200">
+                        Absolutely not. Prostate stimulation is a physiological response unrelated to sexual orientation. The prostate contains nerve endings that respond to stimulation regardless of identity. Many heterosexual men enjoy prostate play solo or with partners.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Medical Disclaimer</h4>
+                    <p class="text-sm">This content is for educational purposes only and does not constitute medical advice. Consult a healthcare provider for persistent sexual health concerns.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Crisis Resources</h4>
+                    <p class="text-sm">If you're experiencing sexual dysfunction causing distress, consider speaking with a urologist or certified sex therapist (AASECT).</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Privacy Note</h4>
+                    <p class="text-sm">This site does not collect personal data. Use private browsing if concerned about digital privacy.</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 Vitality Guide. Sexual health education for consenting adults.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all content
+            document.querySelectorAll('[id^="content-"]').forEach(el => {
+                el.classList.remove('visible-section');
+                el.classList.add('hidden-section');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('[id^="tab-"]').forEach(el => {
+                el.classList.remove('tab-active', 'text-blue-600', 'border-b-3', 'border-blue-600');
+                el.classList.add('text-slate-500');
+            });
+            
+            // Show selected content
+            document.getElementById('content-' + tabName).classList.remove('hidden-section');
+            document.getElementById('content-' + tabName).classList.add('visible-section');
+            
+            // Activate tab
+            const activeTab = document.getElementById('tab-' + (tabName === 'prostate' ? 'prostate-btn' : tabName));
+            activeTab.classList.remove('text-slate-500');
+            activeTab.classList.add('tab-active', 'text-blue-600', 'border-b-3', 'border-blue-600');
+        }
+
+        // FAQ toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const arrow = button.querySelector('svg');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                arrow.classList.remove('rotate-180');
+            }
+        }
+
+        // Anatomy highlight
+        function highlightPart(part) {
+            // Reset all
+            document.querySelectorAll('#anatomy-svg [id]').forEach(el => {
+                el.style.opacity = '0.3';
+            });
+            
+            // Highlight specific parts
+            if (part === 'penile') {
+                document.getElementById('penile-shaft').style.opacity = '1';
+                document.getElementById('glans').style.opacity = '1';
+                document.getElementById('frenulum-dot').style.opacity = '1';
+            } else if (part === 'prostate') {
+                document.getElementById('prostate-gland').style.opacity = '1';
+            } else if (part === 'nervous') {
+                document.getElementById('glans').style.opacity = '1';
+                document.getElementById('frenulum-dot').style.opacity = '1';
+            }
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                document.querySelectorAll('#anatomy-svg [id]').forEach(el => {
+                    el.style.opacity = el.id === 'prostate-gland' ? '0.7' : '1';
+                });
+            }, 3000);
+        }
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+
+        // Initialize GSAP animations if available
+        if (typeof gsap !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            gsap.from('.technique-card', {
+                scrollTrigger: {
+                    trigger: '#techniques',
+                    start: 'top 80%',
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.2
+            });
+        }
+    </script>
+</body>
+</html>
